@@ -80,4 +80,11 @@ class UserVideosController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def user_video_create
+    user_video = UserVideo.new
+    user_video.video = params[:user_video]
+    user_video.save!
+    render :json => user_video.as_json(:only => :id)
+  end
 end
