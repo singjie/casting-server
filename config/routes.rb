@@ -1,4 +1,8 @@
 CastingServer::Application.routes.draw do
+  get 'castings/latest'
+  resources :castings
+
+
   resources :user_videos
 
 

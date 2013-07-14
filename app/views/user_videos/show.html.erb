@@ -5,6 +5,12 @@
   <%= @user_video.user %>
 </p>
 
+<div class="flowplayer functional">
+   <video>
+      <source type="video/mp4" src="<%= "#{@user_video.video.url}"%>">
+   </video>
+</div>
+
 
 <%= link_to 'Edit', edit_user_video_path(@user_video) %> |
 <%= link_to 'Back', user_videos_path %>
