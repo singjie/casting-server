@@ -1,0 +1,23 @@
+<h1>Listing user_videos</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_videos.each do |user_video| %>
+  <tr>
+    <td><%= user_video.user %></td>
+    <td><%= link_to 'Show', user_video %></td>
+    <td><%= link_to 'Edit', edit_user_video_path(user_video) %></td>
+    <td><%= link_to 'Destroy', user_video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User video', new_user_video_path %>
