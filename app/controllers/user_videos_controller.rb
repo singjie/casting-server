@@ -2,7 +2,7 @@ class UserVideosController < ApplicationController
   # GET /user_videos
   # GET /user_videos.json
   def index
-    @user_videos = UserVideo.all
+    @user_videos = UserVideo.order("id desc").all
 
     respond_to do |format|
       format.html # index.html.erb
