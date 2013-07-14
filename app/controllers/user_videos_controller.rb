@@ -85,6 +85,7 @@ class UserVideosController < ApplicationController
     user_video = UserVideo.new
     user_video.video = params[:user_video]
     user_video.save!
+    puts user_video.video.url(:original)
     render :json => user_video.as_json(:only => :id)
   end
 end
