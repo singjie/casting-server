@@ -3,6 +3,8 @@ CastingServer::Application.routes.draw do
 
 
   get 'castings/latest'
+  get 'castings/popular'
+  get 'castings/invite'
   resources :castings
 
 

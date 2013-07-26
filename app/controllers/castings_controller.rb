@@ -84,4 +84,12 @@ class CastingsController < ApplicationController
   def latest
     @casting = Casting.latest
   end
+  
+  def popular
+    @casting = Casting.where(:id => [1,2,3])
+  end
+  
+  def invite
+    @casting = Casting.where(:id => [2])
+  end
 end
