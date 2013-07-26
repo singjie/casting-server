@@ -90,6 +90,6 @@ class CastingsController < ApplicationController
   end
   
   def invite
-    @casting = Casting.where(:id => [2])
+    @casting = Casting.where(:id => [1,2])
   end
 end
