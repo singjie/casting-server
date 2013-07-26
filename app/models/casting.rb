@@ -4,7 +4,7 @@ class Casting < ActiveRecord::Base
   
   belongs_to :manager
   
-  attr_accessible :image, :description, :kind, :name, :manager_id
+  attr_accessible :image, :description, :kind, :name, :manager_id, :requirements
 
   has_attached_file :image,
   :styles => { :medium => "640x640>", :thumb => "100x100>" },

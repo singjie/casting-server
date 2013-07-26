@@ -1,4 +1,4 @@
-attribute :id, :description, :kind, :name
+attribute :id, :description, :kind, :name, :requirements
 
 node :image do |c|
  c.image.url(:original)
