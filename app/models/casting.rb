@@ -2,7 +2,9 @@ class Casting < ActiveRecord::Base
   CASTINGKINDLIST = 1
   CASTINGKINDMAIN = 2
   
-  attr_accessible :image, :description, :kind
+  belongs_to :manager
+  
+  attr_accessible :image, :description, :kind, :name, :manager_id
 
   has_attached_file :image,
   :styles => { :medium => "640x640>", :thumb => "100x100>" },
@@ -14,7 +16,7 @@ class Casting < ActiveRecord::Base
   def self.latest
     main = Casting.where(:kind => CASTINGKINDMAIN).order("id desc").limit(1).all
     
-    lists = Casting.where(:kind => CASTINGKINDLIST).order("id desc").limit(3).all
+    lists = Casting.where(:kind => CASTINGKINDLIST).order("id desc").limit(10).all
     
     castings = main+lists
     
