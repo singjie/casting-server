@@ -1,3 +1,201 @@
 // Place all the styles related to the UserVideos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	text-align:center;	
+	background-color:#4d5155;
+	margin:0;
+	font-family:Verdana;
+}
+
+.topbar{
+	height:50px;
+	width:100%;
+	background-color:#303335;
+	background-repeat: repeat-x;	
+	position:fixed;
+	z-index:99;
+}
+
+#navbar ul { 
+	margin-top: 0.5%;
+	padding: 5px; 
+	list-style-type: none; 
+	text-align: center; 
+	vertical-align: middle;
+} 
+
+#navbar ul li {  
+	display: inline; 
+} 
+
+#navbar ul li a { 
+	text-decoration: none; 
+	padding-right:3.5em;
+	color: #fff;
+
+} 
+
+#navbar ul li a:hover { 
+	color: #CCCCCC;
+} 
+
+.secondbar {
+	height:40px;
+	width:100%;
+	top:50px;
+	background-color:#CCCCCC;
+	background-repeat: repeat-x;	
+	position:fixed;
+	z-index:98;
+}
+
+.companyLogo{
+	border:1px solid white;
+	top:0;
+	right:5%;
+	position:absolute;
+	background-color:#f2f2f2;
+	background-image:url(images/bg_companyLogo.png);
+	background-size:100% 100%;
+	
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	z-index:100;
+	padding: 2% 1% 2% 1%;
+
+	color:#30333;
+	font-weight:bold;
+	font-size: 2.5em;
+}
+
+.newCasting {
+	left:6%;
+}
+
+.newCastingImg {
+	height: 30px;
+	width: 30px;
+	background-image:url(images/btnAdd.png);
+	margin-right: 5px;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-position:center;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.topBarText {
+	font-family:Verdana;
+	color:white;
+	display: inline-block;
+}
+
+.container {
+	position: absolute;
+	width: 99%;
+	top: 20%;
+	left: 1%;
+}
+
+.all-user-videos {
+	overflow:hidden;
+}
+
+.user-video-table {
+	padding: 1px;
+	float: left;
+}
+
+.user-video {
+	height:300px;
+	width:220px;
+}
+
+.user-description {
+	background-color: #4f4f4f;
+	vertical-align: text-top;
+	width: 165px;
+	padding-left:3%;
+	padding-right:3%;
+}
+
+.user-name {
+	font-size: 1em;
+	padding-top: 5%;
+}
+
+.user-details {
+	font-size: 0.7em;
+}
+
+.user-description-textcolor {
+	color:#cacaca;
+}
+
+.add-tag {
+	font-size: 0.8em;
+}
+
+.add-tag-img {
+	background-repeat: no-repeat;
+	height:20px;
+	width:20px;
+	display: inline-block;
+	background-image:url(images/btnAddTag.png);
+}
+
+.add-tag-text {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: -12px;
+}
+
+.buffer-height {
+	height:10px;
+}
+
+.big-buffer-height {
+	height:20px;
+}
+
+.countCircle {
+	width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    background-color:#303335;
+}
+
+.countCircleText {
+	font-size: 0.5em;
+	text-align: center;
+}
+
+.countText {
+	font-size: 0.5em;
+	text-align: left;
+}
+
+.btnAction {
+	background-image:url(images/bg_button.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:100% 100%;
+
+	font-style: Verdana;
+	text-align: center;
+	width: 140px;
+	height: 50px;
+
+	border-radius: 5px;
+
+	font-weight:bold;
+	color:#4f4f4f;
+}
+
+/* for between castings */
+.buffer-width {
+	width:1%;
+}
