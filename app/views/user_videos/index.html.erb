@@ -16,62 +16,41 @@
   </div>
   <div class="secondbar"></div>
 
-  <div class="container">
-    <div class="all-user-videos">
-      <% @user_videos.each do |user_video| %>
-      <table class="user-video-table">
-        <tr>
-          <td class="user-video">
-            <div class="flowplayer functional">
-              <video>
-                <source type="video/mp4" src="<%="#{user_video.video.url}"%>">
-                </video>
-              </div>
-            </td>
-            <td class="user-description">
-              <div class="user-name user-description-textcolor">Joanna Pang</div>
-              <div class="user-details user-description-textcolor">25 years, 1.70m</div>
-              <div class="big-buffer-height"></div>
-
-              <!-- table to display the stats -->
-              <table>
-                <tr>
-                  <td class="countCircle">
-                    <div class="countCircleText user-description-textcolor">10</div>
-                  </td>
-                  <td>
-                    <div class="countText user-description-textcolor">Shortlisted</div>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="countCircle">
-                    <div class="countCircleText user-description-textcolor">3</div>
-                  </td>
-                  <td>
-                    <div class="countText user-description-textcolor">Casted</div>
-                  </td>
-                </tr>
-              </table>
-
-              <div class="big-buffer-height"></div>
-
-              <div class="add-tag">
-                <div class="add-tag-img"></div>
-                <div class="add-tag-text user-description-textcolor">Add tag</div>
-              </div>
-
-              <div class="big-buffer-height"></div>
-
-              <button class="btnAction" style="font-size:1.2em;">Shortlist</button>
-              <div class="buffer-height"></div>
-              <button class="btnAction"style="font-size:0.9em;">Reject</button>
-            </td>
-          </tr>
-        </table>
-
-        <div class="buffer-width"></div>
-        
-        <% end %>
-      </div> <!-- end div all-user-videos -->
-    </div> <!-- end div container -->
+  <div class="all-user-videos">
+    <% @user_videos.each do |user_video| %>
+    <div class="user-video">
+      <div class="video">
+        <div class="flowplayer functional">
+          <video>
+            <source type="video/mp4" src="<%="#{user_video.video.url}"%>">
+            </video>
+          </div>
+        </div>
+        <div class="side">
+          <h2 class="user-name user-description-textcolor">Joanne Pang</h2>
+          <p class="user-details user-description-textcolor">25 years, 1.70m</p>
+          <!-- table to display the stats -->
+          <ul class="stats">
+            <li class="stat">
+              <span class="countCircle user-description-textcolor">10</span>
+              <span class="countText user-description-textcolor">shortlisted</span>
+            </li>
+            <li class="stat">
+              <span class="countCircle user-description-textcolor">3</span>
+              <span class="countText user-description-textcolor">casted</span>
+            </li>
+          </ul>
+          <div class="tags">
+            <a href="#" class="user-description-textcolor add-tag">
+              <i class="add-tag-icon"></i> Add tag
+            </a>
+          </div>
+          <div class="actions">
+            <button class="btnAction accept" >Shortlist</button>
+            <button class="btnAction reject" >Reject</button>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div> <!-- end all-user-videos -->
 
