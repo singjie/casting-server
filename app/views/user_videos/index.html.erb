@@ -20,11 +20,11 @@
     <% @user_videos.each do |user_video| %>
     <div class="user-video">
       <div class="video">
-        <div class="flowplayer functional">
-          <video>
-            <source type="video/mp4" src="<%="#{user_video.video.url}"%>">
-            </video>
-          </div>
+
+        <video id="example_video_<%=user_video.id%>" class="video-js vjs-default-skin" controls="true" preload="auto" width="240" height="320"
+            data-setup="{}">
+          <source src="<%="#{user_video.video.url}"%>" type='video/mp4' />
+        </video>
         </div>
         <div class="side">
           <h2 class="user-name user-description-textcolor">Joanne Pang</h2>
